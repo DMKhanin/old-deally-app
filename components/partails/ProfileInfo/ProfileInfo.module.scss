@@ -1,0 +1,25 @@
+.ProfileInfo {
+    &-Picture {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-Content {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    &-Name {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    &-Mail {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.075em;
+        color: #697088;
+        padding-top: 9px;
+    }
+}

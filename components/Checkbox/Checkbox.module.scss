@@ -1,0 +1,52 @@
+.Checkbox {
+
+  &-Input {
+    display: none;
+  }
+
+  &-Rect {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-Container {
+    cursor: pointer;
+    position: relative;
+    height: 32px;
+
+    .Checkbox-Rect {
+      background: #D9DBE9;
+
+      .Checkbox-Container:hover & {
+        background: #A0A3BD;
+      }
+    }
+  }
+
+  &-Input:checked ~ .Checkbox-Container {
+    .Checkbox-Rect {
+      background: #5F2EEA url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1L4.75 10L1 5.90909' stroke='%23F7F7FC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+
+      .Checkbox-Container:hover & {
+        background: #2A00A2url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1L4.75 10L1 5.90909' stroke='%23F7F7FC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+      }
+    }
+  }
+
+  &-Label {
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    font-size: 16px;
+    color: #6E7191;
+    letter-spacing: 0.75px;
+  }
+}

@@ -1,0 +1,66 @@
+.OutlineInput {
+    position: relative;
+    height: 88px;
+    padding-bottom: 30px;
+    
+    &-Field {
+        height: 100%;
+        display: block;
+        width: 100%;
+        padding: 0 18px;
+        color: #697088;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.075em;
+        border: 2px solid #E6EAF3;
+        border-radius: 11px;
+        background: none;
+        transition: all ease-in-out 200ms;
+
+        &:hover {
+            border: 2px solid #c5cbd8;
+            transition: all ease-in-out 100ms;
+        }
+
+        &:focus {
+            border: 2px solid #6E70F7;
+            transition: all ease-in-out 25ms;
+        }
+
+        @media (max-width: 575.98px) { 
+            font-size: 16px;
+         } 
+
+        &_status {
+            &_error {
+                background: #FBE8E8;
+                border: 2px solid #B80A0A;
+                color: #B80A0A;
+
+                &:hover {
+                    border: 2px solid #530303;
+                }
+
+                &:focus {
+                    // color: #697088;
+                    background: #fff;
+                    border: 2px solid #B80A0A;
+                }
+            }
+        }
+
+        &::placeholder {
+            opacity: 0.6;
+            color: inherit;
+        }
+    }
+
+    &-Error {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: #B80A0A;
+        padding-left: 8px;
+    }
+}

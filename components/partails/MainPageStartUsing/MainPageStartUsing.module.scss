@@ -1,0 +1,10 @@
+.MainPageStartUsing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-Container {
+        max-width: 272px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,28 @@
+.Header {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 28px 0;
+    z-index: 9999;
+    background: linear-gradient(to bottom, #f4f7ff, #f4f7ff00);
+    // backdrop-filter: blur(4px);
+
+    @media (max-width: 575.98px) { 
+        padding: 15px 0;
+    }
+
+    &-Content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-Col {
+        &_row {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

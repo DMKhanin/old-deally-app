@@ -1,0 +1,14 @@
+.Logotype {
+    height: 34px;
+    width: auto;
+
+
+    @media (max-width: 575.98px) { 
+        height: 28px;
+    }
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+}

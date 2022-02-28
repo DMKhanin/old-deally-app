@@ -1,0 +1,25 @@
+.MainPageVideo {
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-right: 100%;
+    padding-bottom: 56.2%;
+    position: relative;
+
+    &-Content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+        letter-spacing: 0.075em;
+        color: #F4F7FF;
+    }
+}

@@ -1,0 +1,60 @@
+.ShopSidebar {
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+  width: 440px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;    
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 16px rgb(17 17 17 / 4%);
+  transform: translateX(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 200ms;
+  z-index: 1000;
+
+  &_visible_true {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &-Container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255,255,255, 0.2);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease-in-out 200ms;
+
+    &_visible_true {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &-Header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px #fff;
+  }
+
+  &-Title {
+    font-size: 22px;
+  }
+
+  &-Content {
+    padding: 0 30px;
+  }
+}

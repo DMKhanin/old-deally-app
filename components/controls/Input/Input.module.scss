@@ -1,0 +1,55 @@
+.Input {
+    position: relative;
+
+    &-Field {
+        background: #FFFFFF;
+        border-radius: 11px;
+        padding: 19px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.075em;
+        display: block;
+        width: 100%;
+        border: 2px solid rgba(202, 205, 214, 0);
+        transition: all ease-in-out 200ms;
+        color: #2F3650;
+    
+        &::placeholder {
+            color: #697088;
+        }
+    
+        &:hover {
+            border: 2px solid #CACDD6;
+            transition: all ease-in-out 100ms;
+        }
+    
+        &:focus {
+            border: 2px solid #6E70F7;
+            transition: all ease-in-out 25ms;
+        }
+    
+        &::-webkit-autofill,
+        &::-webkit-autofill:hover, 
+        &::-webkit-autofill:focus, 
+        &::-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+        }
+    }
+    
+    &-Icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 63px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover svg {
+            stroke: #6E70F7
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.Wallet {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.075em;
+    color: #697088;
+    min-width: 183px;
+    margin-right: 15px;
+
+    * {
+        color: inherit;
+    }
+
+    span {
+        color: #2DBE56;
+    }
+}

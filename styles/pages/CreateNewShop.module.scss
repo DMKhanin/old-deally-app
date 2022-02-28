@@ -1,0 +1,13 @@
+.CreateNewShop {
+    &-Picture {
+        padding-top: 123px;
+    }
+
+    &-Content {
+        padding-top: 293px;
+
+        @media screen and (max-width: 991px) {
+            padding-top: 93px;
+        }
+    }
+}

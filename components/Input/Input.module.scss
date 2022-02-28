@@ -1,0 +1,96 @@
+.Input {
+  width: 100%;
+
+  &-Container {
+    width: 100%;
+    height: 64px;
+    position: relative;
+    display: block;
+    position: relative;
+  }
+
+  &__field {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #EFF0F7;
+    padding: 0 24px;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    font-weight: 400;
+    transition: padding-top ease-in-out 150ms, background ease-in-out 150ms;
+    border-radius: 16px;
+
+    .Input__state-error & {
+      background: #FFF3F8 !important;
+    }
+
+    &::placeholder {
+      color: transparent;
+      font-size: 0px;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown){
+      padding-top: 24px;
+    }
+
+    &:not(:placeholder-shown) {
+      background: #EFF0F7;
+      border-radius: 16px;
+      transition: background ease-in-out 150ms;
+    }
+
+    &:focus {
+      .Input--status--primary & {
+        box-shadow: inset 0 0 0 2px #5F2EEA;
+      }
+
+      .Input__state-error & {
+        box-shadow: inset 0 0 0 2px #ED2E7E !important;
+      }
+
+      .Input--status--default & {
+        box-shadow: inset 0 0 0 2px #000;
+      }
+
+      background: transparent;
+      transition: background ease-in-out 25ms;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6E7191;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    left: 24px;
+    top: 18px;
+    transition: top ease-in-out 150ms;
+    pointer-events: none;
+
+    .Input__state-error & {
+      color: #ED2E7E;
+    }
+
+    .Input__field:focus ~ &,
+    .Input__field:not(:placeholder-shown) ~ & {
+      top: 6px;
+    }
+  }
+
+  &-Error {
+    font-size: 14px;
+    padding-top: 10px;
+    color: #C30052;
+    font-weight: 500;
+  }
+}

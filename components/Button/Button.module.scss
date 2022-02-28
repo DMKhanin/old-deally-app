@@ -1,0 +1,80 @@
+@keyframes rotate { from { transform: rotate(0deg) } to { transform: rotate(360deg); }  }
+
+.Button {
+  border-radius: 40px;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+
+  &_style_primary {
+    color: #fff;
+    background: #5F2EEA;
+    background-position: center;
+    transition: background ease-in-out 150ms;
+    border-radius: 16px;
+
+    &:hover {
+      background: #2A00A2;
+      transition: background ease-in-out 120ms;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, red 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+  }
+
+  &:active::after {
+    transform: scale(0, 0);
+    opacity: .2;
+    transition: 0s;
+  }
+
+  &_state_loading {
+    color: transparent;
+    pointer-events: none;
+    cursor: default;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(50% - 10px);
+      top: calc(50% - 10px);
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0007 1.66683C8.35247 1.66683 6.74131 2.15557 5.3709 3.07125C4.00049 3.98693 2.93238 5.28842 2.30165 6.81113C1.67092 8.33385 1.5059 10.0094 1.82744 11.6259C2.14898 13.2424 2.94266 14.7273 4.10809 15.8927C5.27353 17.0582 6.75839 17.8518 8.3749 18.1734C9.99141 18.4949 11.667 18.3299 13.1897 17.6992C14.7124 17.0684 16.0139 16.0003 16.9296 14.6299C17.8452 13.2595 18.334 11.6483 18.334 10.0002' stroke='%23FCFCFC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center center;
+      animation: rotate 1200ms linear 0s infinite;
+    }
+  }
+}

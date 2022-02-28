@@ -1,0 +1,46 @@
+.ContentLayout {
+
+    &-Header {
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+
+    &-Title {
+        font-size: 42px;
+        color: #2F3650;
+    }
+
+    &-Date {
+        font-size: 14px;
+        color: #2F3650;
+        font-weight: 500;
+    }
+    
+
+    &-Content {
+        display: block;
+        padding: 0px 30px;
+        border-radius: 20px;
+        background: #fff;
+        padding-bottom: 40px;
+
+        h1,h2,h3,h4,h5,h6 { 
+            padding-bottom: 20px;
+            padding-top: 40px;
+            display: block;
+            color: #6E70F7;
+        }
+
+        p {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 16px;
+            line-height: 32px;
+            color: #2F3650;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+    }
+}

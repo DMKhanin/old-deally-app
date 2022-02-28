@@ -1,0 +1,13 @@
+.ProfileWallet {
+    padding: 0 0 28px;
+    color: inherit;
+
+    &-Money {
+        color: inherit;
+        font-weight: 600;
+        
+        span {
+            color: #2DBE56;
+        }
+    }
+}

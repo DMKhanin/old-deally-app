@@ -1,0 +1,41 @@
+.MoneyStatus {
+  border-radius: 32px;
+  padding: 23px 41px;
+  background: #fff;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.04);
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &__column {
+    &--space {
+      padding-right: 35px;
+    }
+  }
+
+  &__cash {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__label {
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    color: #6E7191;
+  }
+
+  &__loading {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0007 1.66683C8.35247 1.66683 6.74131 2.15557 5.3709 3.07125C4.00049 3.98693 2.93238 5.28842 2.30165 6.81113C1.67092 8.33385 1.5059 10.0094 1.82744 11.6259C2.14898 13.2424 2.94266 14.7273 4.10809 15.8927C5.27353 17.0582 6.75839 17.8518 8.3749 18.1734C9.99141 18.4949 11.667 18.3299 13.1897 17.6992C14.7124 17.0684 16.0139 16.0003 16.9296 14.6299C17.8452 13.2595 18.334 11.6483 18.334 10.0002' stroke='%2314142B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    width: 108px;
+    background-repeat: no-repeat;
+    animation: rotate 1200ms linear 0s infinite;
+  }
+}

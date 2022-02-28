@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@partails/*": ["components/partails/*"],
+        "@typography/*": ["components/typography/*"],
+        "@layouts/*": ["components/layouts/*"],
+        "@controls/*": ["components/controls/*"],
+        "@components/*": ["components/*"],
+        "@helpers/*": ["helpers/*"],
+        "@api/*": ["api/*"],
+        "@actions/*": ["store/actions/*"],
+        "@contexts": ["contexts/index.js"],
+        "@formValidators": ["formValidators/*"],
+        "@public": ["public/*"],
+      }
+    }
+  }

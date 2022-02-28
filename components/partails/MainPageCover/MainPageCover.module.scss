@@ -1,0 +1,56 @@
+.MainPageCover {
+    padding-top: 359px;
+    padding-bottom: 332px;
+    min-height: 100vh;
+    max-height: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/static/main-bg.png") calc(50% - 90px) 130px no-repeat;
+
+    @media (max-width: 575.98px) { 
+        padding-top: 250px;
+        min-height: auto;
+        padding-bottom: 150px;
+        background: none;
+    }
+
+    &-Title,
+    &-Description {
+        display: block;
+        text-align: center;
+    }
+
+    &-Title {
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 69px;
+        text-align: center;
+        letter-spacing: 0.075em;
+        color: #2F3650;
+        padding-bottom: 13px;
+
+        @media (max-width: 575.98px) {
+            font-size: 32px;
+            padding-bottom: 0px;
+        }
+
+        span {
+            color: #6E70F7;
+        }
+    }
+
+    &-Description {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.075em;
+        color: #697088;
+
+        @media (max-width: 575.98px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

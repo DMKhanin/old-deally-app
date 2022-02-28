@@ -1,0 +1,42 @@
+.ContentPage {
+  padding-bottom: 60px;
+
+  &__header {
+    padding-top: 220px;
+    padding-bottom: 50px;
+  }
+
+  &__back {
+    color: #8F55EA;
+
+    svg {
+      color: inherit;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    opacity: .5;
+  }
+
+  &__content {
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: #fff;
+
+    h3 {
+      padding-top: 15px;
+      padding-bottom: 35px;
+      display: block;
+    }
+
+    p {
+      display: block;
+      padding-bottom: 35px;
+      font-size: 16px;
+      line-height: 178%;
+    }
+  }
+}

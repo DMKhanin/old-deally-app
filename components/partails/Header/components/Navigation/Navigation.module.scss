@@ -1,0 +1,20 @@
+.Navigation {
+    &-List {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-Link {
+        padding: 5px 18px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.075em;
+        color: #2F3650;
+        transition: all ease-in-out 150ms;
+
+        &:hover {
+            color: #6E70F7;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.Verificate {
+    display: block;
+    padding: 22px 0 0;
+    text-align: center;
+
+    &-Status {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+
+        &_color_not-verificated {
+            text-align: center;
+            letter-spacing: 0.075em;
+            color: #B80A0A;
+        }
+    }
+
+    &-Link {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        padding: 2px;
+    }
+}

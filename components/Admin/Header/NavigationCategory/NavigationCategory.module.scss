@@ -1,0 +1,54 @@
+.NavigationCategory {
+  position: fixed;
+  background: transparent;
+  transition: background ease-in-out 300ms, backdrop-filter ease-in-out 300ms;
+  backdrop-filter: blur(0px);
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+
+  &--visible {
+    background: #F7F7FC90;
+    backdrop-filter: blur(4px);
+    pointer-events: all;
+    transition:  background ease-in-out 150ms, backdrop-filter ease-in-out 150ms;
+  }
+
+  &__container {
+    position: fixed;
+    z-index: 2;
+    top: 134px;
+    right: 20px;
+    border-radius: 32px;
+    padding: 23px 41px;
+    background: #fff;
+    box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.04);
+    min-height: 400px;
+    max-height: calc(100vh - 154px);
+    width: 461px;
+    opacity: 0;
+    transform: scale(0.9);
+    transform-origin: top center;
+    transition: all ease-in-out 300ms;
+    overflow-y: auto;
+    pointer-events: none;
+
+    .NavigationCategory--visible & {
+      transition: all ease-in-out 150ms;
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: all;
+    }
+  }
+
+  h2 {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+  }
+}

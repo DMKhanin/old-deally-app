@@ -1,0 +1,35 @@
+.DashboardHeader {
+    padding: 15px 0;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #f4f7ff, #f4f7ff00);
+
+    &-Container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-Column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_left {
+            img {
+                width: 107px;
+                height: 35px;
+            }
+        }
+
+        &_right {
+            padding: 13px 18px;
+            background: #fff;
+            border-radius: 12px;
+            box-sizing: content-box;
+            height: 41px;
+        }
+    }
+}

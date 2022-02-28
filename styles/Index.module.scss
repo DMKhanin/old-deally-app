@@ -1,0 +1,520 @@
+@import './pages/common.scss'; 
+$transition-hover: ease-in-out 100ms;
+$transition-default: ease-in-out 150ms;
+
+
+.MainPage {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 180px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
+  }
+
+  * {
+    font-family: "Quicksand", sans-serif;
+  }
+}
+
+.AccentLink {
+  padding: 10px 28px;
+  border-radius: 100px;
+  background: #7461E8;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  cursor: pointer;
+  transition: $transition-default;
+
+  &:hover {
+    background: #8F55EA;
+    transition: $transition-hover;
+  }
+}
+
+.Navigation {
+  padding-bottom: 20px;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include screen-small {
+      display: none;
+    }
+  }
+
+  &__login {
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 30px;
+    transition: $transition-default;
+
+    &:hover {
+      color: #7461E8;
+      transition: $transition-hover;
+    }
+  }
+
+  &__link {
+    padding: 20px;
+    display: table;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: $transition-default;
+
+    &:hover,
+    &--active {
+      color: #7461E8;
+      transition: $transition-hover;
+    }
+  }
+
+  &__logo {
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.PrimaryLink {
+  display: table;
+  padding: 15px 41px;
+  background: linear-gradient(75.99deg, #4776E6 13.37%, #8E54E9 93.32%);
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  transition: $transition-default;
+
+  &:hover {
+    transition: $transition-hover;
+    background: linear-gradient(75.99deg, #4776E6 13.37%, #4776E6 93.32%);
+  }
+}
+
+.ScreenOne {
+  padding-top: 10px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include screen-small {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 377px;
+
+    @include screen-small {
+      width: 100%;
+      max-width: 472px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__image {
+    @include screen-small {
+      
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 150%;
+    color: #202020;
+    padding-bottom: 24px;
+    display: block;
+
+    @include screen-small {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 150%;
+    padding-bottom: 48px;
+    display: block;
+
+    @include screen-small {
+      text-align: center;
+
+      & + * {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.h2 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.Features {
+  padding-top: 80px;
+  
+  &__row {
+    width: calc(100% + 40px);
+    margin-left: -15px;
+    padding-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+
+    @include screen-small {
+      width: calc(33% - 30px);
+      max-width: unset;
+    }
+
+    @media screen and (max-width: 650px) {
+      width: calc(50% - 30px);
+    }
+
+    @media screen and (max-width: 420px) {
+      width: calc(100%);
+    }
+  }
+}
+
+.FeatureCard {
+  display: block;
+  padding-right: 100%;
+  padding-bottom: 100%;
+  background: #FAFAFA;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  transition: $transition-default;
+  overflow: hidden;
+
+  &::after {
+    background: linear-gradient(1.12deg, #4776E6 -4.63%, #8E54E9 91.96%);;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    border-radius: 10px;
+    transition: $transition-default;
+  }
+
+  &:hover {
+    box-shadow: 0px 23px 20px -16px rgba(82, 132, 230, 0.25);
+    transition: $transition-hover;
+
+    &::after {
+      opacity: 1;
+      transition: $transition-hover;
+    }
+  }
+  
+  &__content {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 44px;
+    transform: translateX(-50%);
+  }
+
+  &__text {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    transition: $transition-default;
+    width: 100%;
+
+    .FeatureCard:hover & {
+      color: #fff;
+      transition: $transition-hover;
+    }
+  }
+}
+
+.Ecommerce {
+  padding-top: 80px;
+  padding-bottom: 150px;
+  
+  &__content {
+    h2 {
+      display: block;
+      padding-bottom: 24px;
+    }
+
+    p {
+      display: block;
+    }
+
+    @include screen-small {
+      flex-direction: column-reverse;
+    }
+  }
+  
+  &__row {
+    display: flex;
+    align-items: center;
+
+    @include screen-small {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.About {
+  background: linear-gradient(11.91deg, #4776E6 -1.66%, #8E54E9 74.78%);
+  padding-top: 56px;
+  padding-bottom: 64px;
+  position: relative;
+
+  &-Paralax {
+    position: absolute;
+    pointer-events: none;
+
+    @include screen-small {
+      display: none;
+    }
+
+    &--left {
+      left: 0;
+      top: 0;
+    }
+
+    &--right {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__content {
+    color: #fff;
+
+    * {
+      color: inherit;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 48px;
+      padding-bottom: 25px;
+      line-height: 48px;
+    }
+
+    h3 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 25px;
+    }
+
+    p {
+      padding-bottom: 32px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+.Feedback {
+  padding-top: 100px;
+  padding-bottom: 115px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 150%;
+    padding-bottom: 24px;
+    text-align:  center;
+  }
+
+  &__description {
+    padding-bottom: 47px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0 auto;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.Footer {
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background: #F7F7FC;
+  
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include screen-small {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__logo {
+    @include screen-small {
+      margin-top: 35px;
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+
+    @include screen-small {
+      display: block;
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #606060;
+    padding: 10px 35px;
+    cursor: pointer;
+    transition: $transition-default;
+
+    @include screen-small {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+
+    &:hover {
+      color: #7461E8;
+      transition: $transition-hover;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding-top: 30px;
+    font-weight: 600;
+    opacity: .5;
+    
+    * {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    @include screen-small() {
+      display: block;
+
+      span {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__social-link {
+    font-size: 18px;
+    margin: 5px;
+
+    &:hover {
+      color: #7461E8;
+    }
+  }
+}
+
+.Pricing {
+  &-List {
+    display: flex;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding-top: 30px;
+
+    @include screen-small() {
+      display: block;
+    }
+  }
+
+  &-Col {
+    padding: 15px;
+    margin-bottom: 60px;
+  }
+}
+

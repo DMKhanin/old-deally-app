@@ -1,0 +1,54 @@
+.MainPageSection {
+    padding-bottom: 110px;
+
+    @media (max-width: 575.98px) { 
+        padding-bottom: 75px;
+    }
+
+    &-Title,
+    &-Description {
+        display: block;
+        text-align: center;
+    }
+
+    &-Title {
+        color: #2F3650;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 39px;
+        padding-bottom: 17px;
+
+        @media (max-width: 575.98px) {
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+    
+        &_size_big {
+            font-size: 42px;
+            padding-bottom: 23px;
+        }
+
+        span {
+            color: #6E70F7;
+        }
+    }
+
+    &-Description {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.075em;
+        color: #697088;
+        padding-bottom: 27px;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+            line-height: 19px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &-Content {
+    }
+}

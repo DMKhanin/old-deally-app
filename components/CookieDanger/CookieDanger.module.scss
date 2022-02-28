@@ -1,0 +1,73 @@
+
+.CookieDanger {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(75.99deg, #4776E6 13.37%, #8E54E9 93.32%);
+  z-index: 100;
+  padding: 20px 0;
+
+  &-Content {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &-Title {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px 0;
+    padding-right: 30px;
+    border-right: 3px solid #fff;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 800px) {
+      border-right: none;
+      border-bottom: 3px solid #fff;
+      padding: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  &-Description {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding-right: 30px;
+
+    @media screen and (max-width: 800px) {
+      text-align: center;
+      padding: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &-Accept {
+    font-size: 16px;
+    padding: 10px 30px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    color: #fff;
+    flex-shrink: 0;
+
+    &:hover {
+      background: #fff;
+      color: #7461E8;
+    }
+  }
+
+  &-Close {
+
+  }
+
+
+}

@@ -1,0 +1,26 @@
+.CategoryListSelector {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-Item {
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    background: #EFF0F7;
+    border-radius: 39px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: #2A00A2;
+    }
+    
+    &--selected {
+      color: #2A00A2;
+      background: #E4DAFF;
+    }
+  }
+}

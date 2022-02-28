@@ -1,0 +1,13 @@
+.CLink {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.075em;
+    color: #6E70F7;
+    transition: all ease-in-out 200ms;
+
+    &:hover {
+        color: #5355D8;
+        transition: all ease-in-out 100ms;
+    }
+}

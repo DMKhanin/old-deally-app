@@ -1,0 +1,28 @@
+.ProfileCard {
+    background: #FFFFFF;
+    box-shadow: 0px 26px 25px -33px rgba(39, 30, 96, 0.18);
+    border-radius: 19px;
+    padding: 30px;
+    margin-bottom: 30px;
+    color: #2F3650;
+
+    &_color_primary {
+        background: #6E70F7;
+        color: #fff;
+    }
+    
+    &-Title {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.075em;
+    }
+
+    &-Title + &-Content {
+        padding-top: 20px;
+    }
+
+    &-Title,
+    &-Content {
+        color: inherit;
+    }
+}
