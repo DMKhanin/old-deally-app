@@ -9,7 +9,7 @@ import clientPromise from '@helpers/adapters/clientPromise';
 
 const options = {
   // Configure one or more authentication providers
-  site: process.env.NEXTAUTH_URL,
+  site: "https://old-deally-app.vercel.app",
   adapter: MongoDBAdapter({
     db: (await clientPromise).db("your-database")
   }),
