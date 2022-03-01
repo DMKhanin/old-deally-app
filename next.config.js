@@ -17,7 +17,7 @@ module.exports = withImages({
   },
   env: {
     // API_URL: 'https://api.deally.io',
-    API_URL: 'http://localhost:4000',
+    API_URL: 'https://deally-old.herokuapp.com',
   },
   webpack: (config, options) => {
     config.experiments = {topLevelAwait: true};
