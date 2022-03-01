@@ -9,6 +9,7 @@ import clientPromise from '@helpers/adapters/clientPromise';
 
 const options = {
   site: process.env.NEXTAUTH_URL || "https://deally-app.herokuapp.com",
+  secret: "this-is-secret"
   adapter: MongoDBAdapter({
     db: (await clientPromise).db("your-database")
   }),
