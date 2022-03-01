@@ -28,6 +28,7 @@ const options = {
     }),
   ],
   secret: "jhewfgpijsdfnvkjnbouewygreowpkrmdg",
+  debug: true,
   pages: {
     signIn: '/auth/signin',
   }
