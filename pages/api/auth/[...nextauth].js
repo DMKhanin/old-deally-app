@@ -18,15 +18,16 @@ const options = {
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM
     }),
-    // FacebookProvider({
-    //     clientId: process.env.FACEBOOK_LOGIN_APP_ID,
-    //     clientSecret: process.env.FACEBOOK_LOGIN_APP_SECRET,
-    // }),
-    // GoogleProvider({
-    //   clientId: process.env.GOOGLE_ID,
-    //   clientSecret: process.env.GOOGLE_SECRET
-    // }),
+    FacebookProvider({
+        clientId: process.env.FACEBOOK_LOGIN_APP_ID,
+        clientSecret: process.env.FACEBOOK_LOGIN_APP_SECRET,
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET
+    }),
   ],
+  secret: "jhewfgpijsdfnvkjnbouewygreowpkrmdg",
   pages: {
     signIn: '/auth/signin',
   }
