@@ -9,7 +9,6 @@ import clientPromise from '@helpers/adapters/clientPromise';
 
 const options = {
   // Configure one or more authentication providers
-  site: process.env.NEXTAUTH_URL,
   adapter: MongoDBAdapter({
     db: (await clientPromise).db("your-database")
   }),
@@ -27,8 +26,12 @@ const options = {
       clientSecret: process.env.GOOGLE_SECRET
     }),
   ],
-  secret: "jhewfgpijsdfnvkjnbouewygreowpkrmdg",
-  debug: true,
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin"
+      return token
+    },
+  },
   pages: {
     signIn: '/auth/signin',
   }
