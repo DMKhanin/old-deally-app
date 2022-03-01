@@ -8,8 +8,7 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
 import clientPromise from '@helpers/adapters/clientPromise';
 
 const options = {
-  // Configure one or more authentication providers
-  site: "https://old-deally-app.vercel.app",
+  site: process.env.NEXTAUTH_URL || "https://deally-app.herokuapp.com",
   adapter: MongoDBAdapter({
     db: (await clientPromise).db("your-database")
   }),
