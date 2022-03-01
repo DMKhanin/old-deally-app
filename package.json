@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start -p $PORT"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@bem-react/classname": "^1.5.12",
     "@draft-js-plugins/buttons": "^4.1.1",
